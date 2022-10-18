@@ -37,3 +37,8 @@ console.log("Hello World"); // Test 4
 console.log("Hello World"); // Test 5
 console.log("hello world"); // Test 6
 console.log("hello World"); // Test 7
+function void() {
+    let x = console.log("Void")
+    return x
+}
+void()
