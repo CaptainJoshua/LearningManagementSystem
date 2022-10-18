@@ -31,3 +31,4 @@ sidebarToggle.addEventListener("click", () => {
     }
 })
 console.log("Hello World");
+console.log("Hello World"); // Test 2
