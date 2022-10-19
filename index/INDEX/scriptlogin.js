@@ -13,5 +13,3 @@ function active() {
         show.style.color = "#111";
     }
 }
-
-console.log("Hello World"); // Test 1 10/20/2022

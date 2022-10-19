@@ -2,37 +2,39 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Login Form</title>
-    <link rel="stylesheet" href="stylelogin.css">
+    <link rel="stylesheet" href="stylelogin.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
     <div class="container">
         <header>Mary JV's School</header>
-        <form>
+        <form action="index.html" onsubmit="return validate()">
             <div class="input-field">
-                <input type="text" required>
+                <!-- !Natanggal ko ata yung class nitong input tag, pabalik na lang. Salamat. -->
+                <input type="text" name="uID" id="uID" required />
                 <label>User ID</label>
             </div>
             <div class="input-field">
-                <input class="pswrd" type="password" required>
+                <input class="pswrd" type="password" name="uPass" id="uPass" required />
                 <span class="show">SHOW</span>
                 <label>Password</label>
             </div>
             <div class="button">
                 <div class="inner"></div>
-                <a href="index.html"></a>
-                <button type="button">LOGIN</button>
-                </a>
+                <button type="submit" value="submit">LOGIN</button>
             </div>
-            <input type="checkbox" value="lsRememberMe" id="rememberMe">
+            <input type="checkbox" value="lsRememberMe" id="rememberMe" />
             <label for="rememberMe">Remember me</label>
             <div class="Forgot">
                 <a href="#">Forgot your password?</a>
+                <script src="scriptlogin.js"></script>
+                <!-- ! Magkaconnect na yung login.html at index.html, pero kailangan baguhin pa rin once may database na. -->
+            </div>
         </form>
-        </div>
+    </div>
 </body>
 
 </html>
