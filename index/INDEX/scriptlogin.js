@@ -17,8 +17,8 @@ function active() {
 // * Validating the user and password fields, simple validation
 function validate() {
     let uID = document.getElementById("uID").value;
-    let pass = document.getElementById("uPass").value;
-    if (uID == "admin" && pass == "admin") {
+    let uPass = document.getElementById("uPass").value;
+    if (uID == "admin" && uPass == "admin") {
         alert("Login successfully");
         return true;
     } else {
