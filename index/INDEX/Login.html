@@ -5,15 +5,30 @@
     <meta charset="utf-8" />
     <title>Login Form</title>
     <link rel="stylesheet" href="stylelogin.css" />
+
+    <!-- * Line of code below is for the logo of the school, check it on the tab portion -->
+    <link rel="shortcut icon" href="images/images/logo.ico" type="image/x-icon" />
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
+    <!-- *Heads-up: I will move the header tag outside the container, because I think its affecting the styling of logo and nav -->
+    <header>
+        <img src="images/images/logo.png" alt="logo" id="logo" />
+        <h1>Mary JV's School</h1>
+        <nav>
+            <ul>
+                <!-- <li><a href="index.html">Home</a></li> -->
+                <li><a href="about.html" accesskey="a">About</a></li>
+                <li><a href="contact.html" accesskey="c">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <header>Mary JV's School</header>
         <form action="index.html" onsubmit="return validate()">
             <div class="input-field">
-                <!-- !Natanggal ko ata yung class nitong input tag, pabalik na lang. Salamat. -->
+                <!-- ! Natanggal ko ata yung class nitong input tag, pabalik na lang. Salamat. -->
                 <input type="text" name="uID" id="uID" required />
                 <label>User ID</label>
             </div>
@@ -26,15 +41,16 @@
                 <div class="inner"></div>
                 <button type="submit" value="submit">LOGIN</button>
             </div>
-            <input type="checkbox" value="lsRememberMe" id="rememberMe" />
-            <label for="rememberMe">Remember me</label>
-            <div class="Forgot">
-                <a href="#">Forgot your password?</a>
-                <script src="scriptlogin.js"></script>
-                <!-- ! Magkaconnect na yung login.html at index.html, pero kailangan baguhin pa rin once may database na. -->
-            </div>
-        </form>
+            <label for="rememberMe">
+          <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+          Remember me</label
+        >
+        <div class="Forgot">
+          <a href="#">Forgot your password?</a>
+          <script src="scriptlogin.js"></script>
+          <!-- ! Magkaconnect na yung login.html at index.html, pero kailangan baguhin pa rin once may database na. -->
+        </div>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
