@@ -22,7 +22,10 @@ function validate() {
         alert("Login successfully");
         return true;
     } else {
-        alert("Login failed");
+        alert("Wrong User ID or Password");
+        //* This will clear the input fields if the user enters the wrong ID or password
+        document.getElementById("uID").value = "";
+        document.getElementById("uPass").value = "";
         return false;
     }
 }
