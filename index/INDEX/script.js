@@ -38,3 +38,10 @@ console.log("Hello World"); // Test 5
 console.log("hello world"); // Test 6
 console.log("hello World"); // Test 7
 console.log("hello word"); // Test 8
+
+// *Simple logout function for the logout button
+function logOut() {
+    setTimeout(function() {
+        window.location.href = "Login.html";
+    }, 5000);
+}
