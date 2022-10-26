@@ -14,7 +14,7 @@ body {
     text-align: center;
     font-family: sans-serif;
     justify-content: center;
-    background-image: url(images/images/truck.jpg);
+    background-image: url(images/images/tempBG.jpg);
     background-size: cover;
     background-blend-mode: luminosity;
     background-position: center;
@@ -62,7 +62,7 @@ header {
     height: 100%;
     display: flex;
     box-shadow: #1b1b32 inset;
-    aspect-ratio: 35 / 4;
+    /*  aspect-ratio: 35 / 4; */
     padding: 0.4rem;
 }
 
@@ -72,7 +72,7 @@ h1 {
 }
 
 nav {
-    width: 50%;
+    width: 50vw;
     max-width: 300px;
     height: 50px;
 }
