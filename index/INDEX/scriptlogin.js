@@ -29,3 +29,8 @@ function validate() {
         return false;
     }
 }
+
+// * Simple reload page function
+function reloadPage() {
+    location.reload();
+}
