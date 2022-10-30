@@ -14,7 +14,7 @@ body {
     text-align: center;
     font-family: sans-serif;
     justify-content: center;
-    background-image: url(images/images/tempBG.jpg);
+    background-image: url(images/images/home-bg.jpg);
     background-size: cover;
     background-blend-mode: luminosity;
     background-position: center;
@@ -47,7 +47,7 @@ body {
 header {
     width: 100%;
     height: 125px;
-    background-color: #1b1b32;
+    /* background-color: #1b1b32; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@ header {
 #logo {
     /* min-width: 15%; */
     width: max(100px, 18vw);
-    background-color: #1b1b32;
+    /* background-color: #1b1b32; */
     height: 100%;
     display: flex;
     box-shadow: #1b1b32 inset;
@@ -67,7 +67,7 @@ header {
 }
 
 h1 {
-    color: #f1be32;
+    color: #0c7e2d;
     font-size: min(5vw, 1.6em);
 }
 
@@ -88,15 +88,15 @@ nav>ul {
 }
 
 nav>ul>li {
-    color: #dfdfe2;
+    color: #135e06;
     margin: 0 0.2rem;
     padding: 0.2rem;
     display: block;
 }
 
 nav>ul>li:hover {
-    background-color: #dfdfe2;
-    color: #1b1b32;
+    /* background-color: #ffffff; */
+    color: #3498db;
     cursor: pointer;
 }
 
