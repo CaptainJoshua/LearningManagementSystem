@@ -1,0 +1,22 @@
+{
+    "name": "learningmanagementsystem",
+    "version": "1.0.0",
+    "description": "Project",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CaptainJoshua/LearningManagementSystem.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/CaptainJoshua/LearningManagementSystem/issues"
+    },
+    "homepage": "https://github.com/CaptainJoshua/LearningManagementSystem#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.20"
+    }
+}
