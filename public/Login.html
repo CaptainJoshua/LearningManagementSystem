@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="stylelogin.css" />
+
+    <!-- * Line of code below is for the logo of the school, check it on the tab portion -->
+    <link rel="shortcut icon" href="images/images/logo.ico" type="image/x-icon" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/images/logo.png" alt="logo" id="logo" class="logo" onclick="reloadPage()" />
+            <h1 onclick="reloadPage()">Mary JV's School</h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="Login.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form action="index.html" method="post">
+            <!-- onsubmit="return validate()" -->
+            <div class="input-field">
+                <!-- ! Natanggal ko ata yung class nitong input tag, pabalik na lang. Salamat. -->
+                <input type="text" name="uID" id="uID" required />
+                <label>User ID</label>
+            </div>
+            <div class="input-field">
+                <input class="pswrd" type="password" name="uPass" id="uPass" required />
+                <span class="show">SHOW</span>
+                <label>Password</label>
+            </div>
+            <div class="button">
+                <div class="inner"></div>
+                <button type="submit" value="submit">LOGIN</button>
+            </div>
+            <label for="rememberMe">
+          <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+          Remember me</label
+        >
+        <div class="Forgot">
+          <a href="#">Forgot your password?</a>
+          <script src="scriptlogin.js"></script>
+          <!-- ! Magkaconnect na yung login.html at index.html, pero kailangan baguhin pa rin once may database na. -->
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
