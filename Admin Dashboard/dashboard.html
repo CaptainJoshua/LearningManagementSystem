@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="side-menu" id="side-menu">
+        <div class="brand-name">
+            <h2>Mary JV's School</h2>
+        </div>
+        <ul>
+            <li onclick="dashboard()">
+                <img src="./img/dashboard (2).png" alt="" />&nbsp;
+                <span>Dashboard</span>
+            </li>
+            <li onclick="students()">
+                <img src="./img/reading-book (1).png" alt="" />&nbsp;<span>Students</span
+          >
+        </li>
+        <li onclick="academe()">
+          <img src="./img/teacher2.png" alt="" />&nbsp; <span>Academe</span>
+            </li>
+            <li onclick="admin()">
+                <img src="./img/admin3.png" alt="" />&nbsp;<span>Admin</span>
+            </li>
+            <!-- <li><img src="settings.png" alt="" />&nbsp; <span>Settings</span></li>
+            <li><img src="school.png" alt="" />&nbsp;<span>Schools</span></li>
+            <li><img src="payment.png" alt="" />&nbsp; <span>Payments</span></li>
+            <li><img src="help-web-button.png" alt="" />&nbsp;<span>Help</span></li>
+            <li><img src="settings.png" alt="" />&nbsp; <span>Settings</span></li> -->
+            <li><img src="./img/logout1.png" alt="" />&nbsp;<span>Logout</span></li>
+        </ul>
+    </div>
+    <div class="container" id="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..." />
+                    <button type="submit">
+              <img src="./img/search.png " alt="" />
+            </button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">Add new</a>
+                    <!-- <img src="./img/notifications.png" alt="" /> -->
+                    <div class="img-case">
+                        <img src="./img/user.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>100</h1>
+                        <h3>Students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./img/student.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>25</h1>
+                        <h3>Academe</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./img/teacher.png" alt="" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>3</h1>
+                        <h3>Admin</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./img/admin1.png" alt="" />
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="box">
+                        <h1>350000</h1>
+                        <h3>Income</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="income.png" alt="" />
+                    </div>
+                </div> -->
+            </div>
+            <div class="content-2">
+                <div class="recent-added">
+                    <div class="title">
+                        <h2>Recent added</h2>
+                        <!-- <a href="#" class="btn">View all</a> -->
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade</th>
+                            <th>Role</th>
+                            <!-- <th>Option</th> -->
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Kinder</td>
+                            <td>Student</td>
+                            <td>
+                                <a href="#" class="btn">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum</td>
+                            <td>Preparatory</td>
+                            <td>Student</td>
+                            <td>
+                                <a href="#" class="btn">View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>John ipsum</td>
+                            <td>Kinder</td>
+                            <td>Academe</td>
+                            <td>
+                                <a href="#" class="btn">View</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- <div class="new-students">
+                    <div class="title">
+                        <h2>New Students</h2>
+                        <a href="#" class="btn">View all</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt="" /></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt="" /></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt="" /></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt="" /></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt="" /></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt="" /></td>
+                        </tr>
+                    </table> -->
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
