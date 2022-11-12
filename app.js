@@ -55,3 +55,4 @@ app.get('/students/:id', (req, res) => {
     }
 
 })
+console.log('test')
