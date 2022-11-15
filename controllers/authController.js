@@ -10,23 +10,26 @@ const register = (req, res, next) => {
             })
         }
         let user = new User({
+            // firstName: req.body.firstName,
+            // lastName: req.body.lastName,
+            // age: req.body.age,
+            // birthDay: req.body.birthDay,
+            // gender: req.body.gender,
+            // mobile: req.body.mobile,
+            // studNum: req.body.studNum,
+            // grLvl: req.body.grLvl,
+            // section: req.body.section,
+            // username: req.body.username,
+            // password: hashedPass,
+            // role: req.body.role,
+            // subjects: req.body.subjects,
+            // name: req.body.name,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            age: req.body.age,
-            birthDay: req.body.birthDay,
-            gender: req.body.gender,
-            mobile: req.body.mobile,
             studNum: req.body.studNum,
-            grLvl: req.body.grLvl,
-            section: req.body.section,
-            username: req.body.username,
-            password: hashedPass,
-            role: req.body.role,
-            subjects: req.body.subjects,
-            // name: req.body.name,
             // email: req.body.email,
-            // phone: req.body.phone,
-            // password: hashedPass,
+            phone: req.body.phone,
+            password: hashedPass,
         });
         user.save()
             .then(user => {
@@ -46,7 +49,7 @@ const login = (req, res, next) => {
     var username = req.body.username;
     var password = req.body.password;
 
-    User.findOne({ $or: [{ email: username }, { phone: username }] })
+    User.findOne({ $or: [{ studNum: username }, { phone: username }] })
         .then(user => {
             if (user) {
                 bcrypt.compare(password, user.password, function(err, result) {
@@ -56,7 +59,7 @@ const login = (req, res, next) => {
                         })
                     }
                     if (result) {
-                        let token = jwt.sign({ name: user.name }, 'verySecretValue', { expiresIn: '1h' });
+                        let token = jwt.sign({ firstName: user.firstName }, 'verySecretValue', { expiresIn: '1h' });
                         res.json({
                             message: 'Login successful!',
                             token
