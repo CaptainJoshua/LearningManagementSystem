@@ -2,10 +2,12 @@ const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const { MongoClient } = require('mongodb');
 
 const authRoute = require('./routes/auth')
+const uri = 'mongodb+srv://joshua:joshua453@cluster0.dtrebuh.mongodb.net/LMS';
 
-mongoose.connect('mongodb://localhost:27017/LMS', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 
 db.on('error', (error) => console.log(error))
