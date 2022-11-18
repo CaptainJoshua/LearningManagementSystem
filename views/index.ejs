@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/public/assets/index.css" />
+    <link rel="shortcut icon" href="/public/assets/logo.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Mary Jv's School</title>
+</head>
+
+<body>
+    <div class="container">
+        <header onclick="reloadPage()">
+            <img src="/public/assets/logo.png" alt="logo" id="logo" class="logo" />
+            <h1>Mary JV's School</h1>
+        </header>
+        <form action="/dashboard" method="post" autocomplete="off">
+            <div class="input-field">
+                <input type="text" name="username" id="username" required />
+                <label>User ID</label>
+            </div>
+            <div class="input-field">
+                <input class="pswrd" type="password" name="password" id="password" required />
+                <span class="show">SHOW</span>
+                <label>Password</label>
+            </div>
+            <div class="button">
+                <div class="inner"></div>
+                <button type="submit" value="submit">LOGIN</button>
+            </div>
+            <label for="rememberMe">
+          <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+          Remember me</label
+        >
+        <div class="Forgot">
+          <a href="#">Forgot your password?</a>
+          <script type="text/javascript" src="/public/login.js"></script>
+        </div>
+      </form>
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>
