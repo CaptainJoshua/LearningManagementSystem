@@ -23,11 +23,8 @@ const register = (req, res, next) => {
             // password: hashedPass,
             // role: req.body.role,
             // subjects: req.body.subjects,
-            // name: req.body.name,
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            studNum: req.body.studNum,
-            // email: req.body.email,
+            email: req.body.email,
+            name: req.body.name,
             phone: req.body.phone,
             password: hashedPass,
         });
@@ -49,7 +46,7 @@ const login = (req, res, next) => {
     var username = req.body.username;
     var password = req.body.password;
 
-    User.findOne({ $or: [{ studNum: username }, { phone: username }] })
+    User.findOne({ $or: [{ email: username }, { phone: username }] })
         .then(user => {
             if (user) {
                 bcrypt.compare(password, user.password, function(err, result) {
@@ -59,7 +56,7 @@ const login = (req, res, next) => {
                         })
                     }
                     if (result) {
-                        let token = jwt.sign({ firstName: user.firstName }, 'verySecretValue', { expiresIn: '1h' });
+                        let token = jwt.sign({ name: user.name }, 'verySecretValue', { expiresIn: '1h' });
                         res.json({
                             message: 'Login successful!',
                             token
@@ -78,6 +75,14 @@ const login = (req, res, next) => {
         })
 }
 
-module.exports = { register, login } // Exporting the register and login functions
-    // Will come back to this later
-    // Time for some rest for now :) (01:48 AM)
+// not sure if this is the right way to do it
+const userLogout = async(req, res) => {
+    try {
+        req.session.destroy();
+        res.redirect('/');
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+module.exports = { register, login, userLogout } // Exporting the register and login functions
