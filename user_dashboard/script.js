@@ -42,6 +42,6 @@ console.log("hello word"); // Test 8
 // *Simple logout function for the logout button
 function logOut() {
     setTimeout(function() {
-        window.location.href = "Login.html";
+        window.location.href = "login.html";
     }, 5000);
 }
