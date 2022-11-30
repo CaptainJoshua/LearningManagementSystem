@@ -6,7 +6,7 @@ const User = require('./models/User')
 const PORT = 5000
 const userController = require('./controllers/authController')
 
-mongoose.connect('mongodb://localhost:27017/usersDB', {
+mongoose.connect('mongodb+srv://joshua:joshua453@cluster0.dtrebuh.mongodb.net/LMS', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         family: 4
@@ -36,22 +36,31 @@ app.get('/dashboard', (req, res) => {
 });
 
 app.get('/logout', (req, res) => {
-    res.render('index');
+    res.redirect('index');
 });
 
+// need to add a route for the dashboard
+// app.post('/dashboard', (req, res) => {
+//     res.render('dashboard');
+// });
+// need to add a route for the user info
+// need to add a route for the announcement
+// need to add a route for the notification
+// need to add a route for the calendar
+
 // ****PORTS REQUEST ARE HERE**** //
-app.post('/dashboard', (req, res) => {
+app.post('/login', (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
 
     User.findOne({ username: username }, (err, foundResults) => {
         if (err) {
             console.log(err);
+            res.render('index');
         } else {
             if (foundResults.password === password) {
                 // res.send('Successfully logged in!');
                 res.render('dashboard', { username: `${username}` });
-
             } else {
                 res.send('Incorrect username or Password!');
             }
@@ -67,19 +76,3 @@ app.post('/dashboard', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
-
-// // routes
-// app.get('/LMS/students', (req, res) => {
-//     let lms = []
-
-//     db.collection('student')
-//         .find()
-//         .sort({ name: 1 })
-//         .forEach(book => lms.push(book))
-//         .then(() => {
-//             res.status(200).json(lms)
-//         })
-//         .catch(() => {
-//             res.status(500).json({ error: 'Could not fetch the documents' })
-//         })
-// })
