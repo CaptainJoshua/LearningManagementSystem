@@ -15,7 +15,7 @@
     <!----===== Boxicon ===== -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <title>Mary Jv's School</title>
+    <title>Mary JV's School</title>
 
 </head>
 
@@ -32,37 +32,31 @@
         <div class="menu-items">
             <ul class="nav-links">
                 <li>
-                    <a href="#">
+                    <a href="/dashboard">
                         <i class='bx bxs-dashboard' style='color:#ffffff'></i>
                         <span class="link-name">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class='bx bx-certification' style='color:#ffffff'></i>
-                        <span class="link-name">E-Certificate</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="/userinfo">
                         <i class='bx bx-id-card' style='color:#ffffff'></i>
                         <span class="link-name">User Information</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/announcements">
                         <i class='bx bxs-news' style='color:#ffffff'></i>
                         <span class="link-name">Announcements</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/notifications">
                         <i class='bx bx-notification' style='color:#ffffff'></i>
                         <span class="link-name">Notifications</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/calendar">
                         <i class='bx bx-calendar-event' style='color:#ffffff'></i>
                         <span class="link-name">Calendar</span>
                     </a>
@@ -78,7 +72,7 @@
                     </a>
                 </li>
 
-                <li class="mode">
+                <!-- <li class="mode">
                     <a href="#">
                         <i class='bx bx-moon' style='color:#ffffff'></i>
                         <span class="link-name">Dark Mode</span>
@@ -87,7 +81,7 @@
                     <div class="mode-toggle">
                         <span class="switch"></span>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -101,14 +95,14 @@
                 <input type="text" placeholder="Search here...">
             </div>
 
-            <img src="/public/assets/Boy.png" alt="" title="<%- username %>">
+            <img src="/public/assets/Boy.png" alt="" title="<%= username %>">
 
         </div>
 
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <span class="text">Hello <%- username %></span>
+                    <span class="text">Hello <%= username %></span>
                 </div>
 
                 <div class="boxes">
