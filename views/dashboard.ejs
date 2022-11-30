@@ -2,28 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- * Line of code below is for the logo of the school, check it on the tab portion -->
-    <link rel="shortcut icon" href="/public/assets/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/public/assets/logo.ico" type="image/x-icon" />
 
     <!----======== CSS ======== -->
-    <link rel="stylesheet" type="text/css" href="/public/assets/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="/public/assets/dashboard.css" />
 
     <!----===== Boxicon ===== -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title>Mary JV's School</title>
-
 </head>
 
 <body>
     <nav>
         <div class="logo-name">
             <div class="logo-image">
-                <img src="/public/assets/logo.png" alt="School logo" title="Mary JV's School">
+                <img src="/public/assets/logo.png" alt="School logo" title="Mary JV's School" />
             </div>
 
             <span class="logo_name">Mary JV'S School</span>
@@ -33,41 +32,40 @@
             <ul class="nav-links">
                 <li>
                     <a href="/dashboard">
-                        <i class='bx bxs-dashboard' style='color:#ffffff'></i>
+                        <i class="bx bxs-dashboard" style="color: #ffffff"></i>
                         <span class="link-name">Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a href="/userinfo">
-                        <i class='bx bx-id-card' style='color:#ffffff'></i>
+                        <i class="bx bx-id-card" style="color: #ffffff"></i>
                         <span class="link-name">User Information</span>
                     </a>
                 </li>
                 <li>
                     <a href="/announcements">
-                        <i class='bx bxs-news' style='color:#ffffff'></i>
+                        <i class="bx bxs-news" style="color: #ffffff"></i>
                         <span class="link-name">Announcements</span>
                     </a>
                 </li>
                 <li>
                     <a href="/notifications">
-                        <i class='bx bx-notification' style='color:#ffffff'></i>
+                        <i class="bx bx-notification" style="color: #ffffff"></i>
                         <span class="link-name">Notifications</span>
                     </a>
                 </li>
                 <li>
                     <a href="/calendar">
-                        <i class='bx bx-calendar-event' style='color:#ffffff'></i>
+                        <i class="bx bx-calendar-event" style="color: #ffffff"></i>
                         <span class="link-name">Calendar</span>
                     </a>
                 </li>
-
             </ul>
 
             <ul class="logout-mode">
                 <li>
                     <a href="/logout">
-                        <i class="uil uil-signout" style='color:#ffffff'></i>
+                        <i class="uil uil-signout" style="color: #ffffff"></i>
                         <span class="link-name">Logout</span>
                     </a>
                 </li>
@@ -92,11 +90,10 @@
 
             <div class="search-box">
                 <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here...">
+                <input type="text" placeholder="Search here..." />
             </div>
 
-            <img src="/public/assets/Boy.png" alt="" title="<%= username %>">
-
+            <img src="/public/assets/Boy.png" alt="" title="<%= username %>" />
         </div>
 
         <div class="dash-content">
@@ -125,7 +122,6 @@
             </div>
 
             <div class="dash-content">
-
                 <div class="boxes">
                     <div class="box box1">
                         <i class="uil uil-comments"></i>
@@ -147,6 +143,6 @@
         </div>
     </section>
     <script src="/public/dashboard.js"></script>
-    <%- include('partials/footer') %>
+</body>
 
 </html>

@@ -1,0 +1,128 @@
+<%- include('layout/header') %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto mt-4">
+                <div class="card shadow">
+                    <div class="card-header bg-success">
+                        <h3 class="text-light">Add new user</h3>
+                    </div>
+                    <!-- input for name -->
+                    <div class="card-body p-4">
+                        <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                            <h6 class="h6 text-danger">* Required to fill</h6>
+                            <div class="mb-3">
+                                <label for="name">Name <span class="text-danger fw-bolder">*</span></label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter full name" required />
+                            </div>
+                            <!-- input for age and dob -->
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="age" class="form-label">Age <span class="text-danger fw-bolder">*</span></label>
+                                        <input type="text" class="form-control" name="age" id="age" placeholder="Enter age" required />
+                                    </div>
+                                    <div class="col">
+                                        <label for="birthday" class="form-label">Birthday <span class="text-danger fw-bolder">*</span></label>
+                                        <input type="date" class="form-control" name="dob" id="birthday" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- input for role and gender -->
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="role" class="form-label">Role <span class="text-danger fw-bolder">*</span></label>
+                                        <select class="form-select" name="role" id="role" required>
+                    <option selected disabled>Please select</option>
+                    <option value="Student">Student</option>
+                    <option value="Academe">Academe</option>
+                    <option value="Admin">Admin</option>
+                  </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="gender" class="form-label">Gender <span class="text-danger fw-bolder">*</span></label>
+                                        <select name="gender" id="gender" class="form-select">
+                    <option selected disabled>Please select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- input for username and password -->
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="username" class="form-label">User ID <span class="text-danger fw-bolder">*</span></label> <input class="form-control" type="text" name="username" required />
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="password" class="form-label">Password <span class="text-danger fw-bolder">*</span></label> <input class="form-control" type="text" name="password" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr text-danger" />
+                            <!-- input for grlvl and section -->
+                            <p class="h4">For student and academe</p>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="inputGradeLevel" class="form-label">Grade / Level</label>
+                                        <select class="form-select" name="grlvl" id="grlvl">
+                    <option selected disabled>Please select</option>
+                    <option value="Prep" id="grlvlPrep">Prep</option>
+                    <option value="Kinder" id="grlvlKinder">Kinder</option>
+                  </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="section" class="form-label">Section</label>
+                                        <div id="section"></div>
+                                        <!-- <select class="form-select" name="section" id="section">
+                    <option selected disabled>Please select</option>
+                    <option value="Joyful" id="sectionJoyful">Joyful</option>
+                    <option value="Cheerful" id="sectionCheerful">Cheerful</option>
+                  </select> -->
+                                        <!-- <div id="section"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- input for studnum and mobile -->
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col"><label for="studNum" class="form-label">Student No.</label> <input type="text" name="studnum" class="form-control" placeholder="Enter student number" /></div>
+
+                                    <div class="col">
+                                        <label for="mobile" class="form-label">Mobile</label>
+                                        <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Enter mobile number" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- input for subjects -->
+                            <div class="mb-0 d-block">
+                                <div class="row-cols-5">
+                                    <label for="subjects" class="form-label">Subjects</label>
+                                    <select class="mb-3 form-control selectpicker w-75" id="subjects" name="subjects" multiple>
+                  <option value="Filipino">Filipino</option>
+                  <option value="English">English</option>
+                  <option value="Math">Math</option>
+                  <option value="ReadingAndPhonics">Reading and Phonics</option>
+                </select>
+                                </div>
+                            </div>
+                            <!-- input for image -->
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Select Image <span class="text-danger">(Optional)</span></label>
+                                <input class="form-control form-control-lg" type="file" name="image" />
+                            </div>
+                            <!-- submit button -->
+                            <div class="mb-3 d-grid">
+                                <input type="submit" name="submit" value="Add User" class="btn btn-success btn-lg" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>

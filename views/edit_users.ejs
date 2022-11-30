@@ -1,0 +1,106 @@
+<%- include('layout/header') %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto mt-4">
+                <div class="card shadow">
+                    <div class="card-header bg-success">
+                        <h3 class="text-light">Update user (
+                            <%= user.name %> )</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/update/<%= user._id %> " method="post" id="add-form" enctype="multipart/form-data">
+                            <!-- Edit data for name -->
+                            <div class="mb-3">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter full name" value="<%= user.name %>" required />
+                            </div>
+                            <!-- Edit data for age and dob -->
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="age" class="form-label">Age</label>
+                                        <input type="text" name="age" id="age" placeholder="Enter age" class="form-control" value="<%= user.age %> " />
+                                    </div>
+                                    <div class="col">
+                                        <label for="birthday" class="form-label">Birthday</label>
+                                        <input type="date" class="form-control" name="dob" id="birthday" value="<%= user.dob %>" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="role" class="form-label">Role</label>
+                                        <select class="form-select" aria-label="Default select example" name="role" id="role">
+                    <option <%="user.role" %>selected><%= user.role %></option>
+                  </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select name="gender" id="gender" class="form-select">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="username" class="form-label">User ID</label>
+                                        <input type="text" name="username" id="username" value=" <%= user.username %> " class="form-control" />
+                                    </div>
+                                    <div class="col">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="text" name="password" id="password" value=" <%= user.password %> " class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr text-danger" />
+                            <p class="h4 text-danger">For student and academe</p>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="grlvl" class="form-label">Grade / Level</label>
+                                        <select class="form-select" aria-label="Default select example" name="grlvl">
+                    <option selected disabled>Please select</option>
+                    <option value="PREP ">Prep</option>
+                    <option value="KINDER ">Kinder</option>
+                  </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="section" class="form-label">Section</label>
+                                        <input type="text" name="section" id="section" class="form-control" value="<%= user.section %>" placeholder="Enter a section" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="studnum" class="form-label">Student No.</label>
+                                        <input type="text" name="studnum" class="form-control" placeholder="Enter student number" value="<%= user.studnum %>" />
+                                    </div>
+                                    <div class="col">
+                                        <label for="mobile" class="form-label">Mobile number</label>
+                                        <input type="text" name="mobile" id="mobile" class="form-control" value="<%= user.mobile %>" placeholder="Enter a mobile number" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Select Image</label>
+                                <input class="form-control form-control-lg" type="file" name="image" />
+                                <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1" />
+                            </div>
+                            <input type="hidden" name="old_image" value="<%= user.image %>" />
+                            <div class="mb-3 d-grid">
+                                <input type="submit" name="submit" value="Update user" class="btn btn-success btn-lg" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>

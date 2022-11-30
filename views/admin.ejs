@@ -1,0 +1,82 @@
+<%- include('layout/header') %>
+
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-lg-12">
+                <% if (message) { %>
+                    <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+                        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <strong><%= message.message %> </strong>
+                    </div>
+                    <% } %>
+                        <div class="table-responsive">
+                            <% if (users != '') { %>
+                                <table class="table table-striped text-center my-3" id="myTable">
+                                    <thead>
+                                        <tr class="table-dark">
+                                            <th>ID</th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Student number</th>
+                                            <th>Grade / Level</th>
+                                            <th>Section</th>
+                                            <th>Role</th>
+                                            <th>Gender</th>
+                                            <th>Age</th>
+                                            <!-- <th>Subjects</th> -->
+                                            <th>Birthday</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% users.forEach((row, index) => { %>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <%= index %>
+                                                </td>
+                                                <td><img src="<%= row.image %>" width="50" class="img-thumbnail" /></td>
+                                                <td>
+                                                    <%= row.name %>
+                                                </td>
+                                                <td>
+                                                    <%= row.studnum %>
+                                                </td>
+                                                <td>
+                                                    <%= row.grlvl %>
+                                                </td>
+                                                <td>
+                                                    <%= row.section %>
+                                                </td>
+                                                <td>
+                                                    <%= row.role %>
+                                                </td>
+                                                <td>
+                                                    <%= row.gender %>
+                                                </td>
+                                                <td>
+                                                    <%= row.age %>
+                                                </td>
+                                                <!-- <td>
+                                                    <%= row.subjects %>
+                                                </td> -->
+
+                                                <td>
+                                                    <%= row.dob %>
+                                                </td>
+                                                <td>
+                                                    <a href="/edit/<%= row._id %>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
+
+                                                    <a href="/delete/<%= row._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i></a>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+                                    </tbody>
+                                </table>
+                                <% } else { %>
+                                    <h1 class="text-center text-secondary mt-5">No users found in the database!</h1>
+                                    <% } %>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>
