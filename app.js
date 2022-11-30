@@ -3,21 +3,19 @@ const mongoose = require('mongoose')
 const express = require('express')
 const session = require('express-session')
 
-
 const app = express()
 const PORT = process.env.PORT || 4000;
 let path = require('path');
 
-const ejs = require('ejs')
-const bodyParser = require('body-parser')
-    // const User = require('./models/User')
-    // const userController = require('./controllers/authController')
+// const ejs = require('ejs')
+// const bodyParser = require('body-parser')
+// const User = require('./models/User')
+// const userController = require('./controllers/authController')
 
 // temporary database connection for testing purposes only (will be replaced with MongoDB Atlas)
 mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-
 })
 
 const db = mongoose.connection;
@@ -32,8 +30,8 @@ db.once('open', () => console.log('Connected to Database'))
     //     .catch(err => console.log(err))
 
 // init app & middleware
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.use(session({
     secret: "my secret key",
@@ -57,12 +55,13 @@ app.set('view engine', 'ejs')
 // routes prefix
 app.use('', require('./routes/routes'))
 
-app.use(bodyParser.urlencoded({ extended: true }))
-
+// app.use(bodyParser.urlencoded({ extended: true }))
 
 app.listen(PORT, () => {
     console.log(`Server started at http://localhost:${PORT}`);
 })
+
+// Will fix this later on when I have time to do so (I'm currently busy with my school work) but I hope this helps you out. If you have any questions, feel free to ask me. I'll try my best to answer them. :) Good luck! 01:40 AM 
 
 // for admin login
 // app.post('/login', (req, res) => {
@@ -75,17 +74,17 @@ app.listen(PORT, () => {
 //     }
 // })
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
 
-app.get('/login', (req, res) => {
-    res.render('index');
-});
+// app.get('/login', (req, res) => {
+//     res.render('index');
+// });
 
-app.get('/dashboard', (req, res) => {
-    res.render('dashboard');
-});
+// app.get('/dashboard', (req, res) => {
+//     res.render('dashboard');
+// });
 
 
 // need to add a route for the user info
@@ -94,21 +93,21 @@ app.get('/dashboard', (req, res) => {
 // need to add a route for the calendar
 
 // ****PORTS REQUEST ARE HERE**** //
-app.post('/login', (req, res) => {
-    const username = req.body.username;
-    const password = req.body.password;
+// app.post('/login', (req, res) => {
+//     const username = req.body.username;
+//     const password = req.body.password;
 
-    User.findOne({ username: username }, (err, foundResults) => {
-        if (err) {
-            console.log(err);
-            res.render('index');
-        } else {
-            if (foundResults.password === password) {
-                // res.send('Successfully logged in!');
-                res.render('dashboard', { username: `${username}` });
-            } else {
-                res.send('Incorrect username or Password!');
-            }
-        }
-    })
-});
+//     User.findOne({ username: username }, (err, foundResults) => {
+//         if (err) {
+//             console.log(err);
+//             res.render('index');
+//         } else {
+//             if (foundResults.password === password) {
+//                 // res.send('Successfully logged in!');
+//                 res.render('dashboard', { username: `${username}` });
+//             } else {
+//                 res.send('Incorrect username or Password!');
+//             }
+//         }
+//     })
+// });
