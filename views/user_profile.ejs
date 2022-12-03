@@ -1,0 +1,83 @@
+<%- include('layout/userdash_header.ejs') %>
+
+    <body class="bg-light">
+        <section class="vh-100" style="background-color: rgba(62, 213, 56, 0.731)">
+            <!--  style="background-color: hsl(270, 22%, 60%)" -->
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col col-lg-6 mb-4 mb-lg-0">
+                        <div class="card mb-3" style="border-radius: 0.5rem">
+                            <div class="row g-0">
+                                <div class="col-md-4 gradient-custom text-center text-white bg-info bg-gradient">
+                                    <!-- style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem bg-primary"> -->
+
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="Avatar" class="img-fluid my-5" style="width: 80px" />
+
+                                    <h5 class="">John Doe</h5>
+                                    <p class="">Student</p>
+                                    <!-- Button to trigger modal -->
+                                    <a href="#"><i class="far fa-edit mb-5 text-success fa-2x" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop"></i></a>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-danger" id="staticBackdropLabel">Update information</h5>
+                                                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body p-4">
+                                                    <form action="">
+                                                        <form>
+                                                            <!-- Mobile input -->
+                                                            <div class="form-outline mb-4">
+                                                                <input type="tel" id="mobile1" class="form-control" />
+                                                                <label class="form-label" for="mobile1">Mobile No.</label>
+                                                            </div>
+
+                                                            <!-- password input -->
+                                                            <div class="form-outline mb-4">
+                                                                <input type="password" id="password1" class="form-control" />
+                                                                <label class="form-label" for="password1">Password</label>
+                                                            </div>
+
+                                                            <!-- Update button -->
+                                                            <button type="submit" class="btn btn-primary btn-block">Update</button>
+                                                        </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-4">
+                                        <h6>Information</h6>
+                                        <hr class="mt-0 mb-4" />
+                                        <div class="row pt-1">
+                                            <div class="col-6 mb-3">
+                                                <h6>Student No.</h6>
+                                                <p class="text-muted">123456</p>
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <h6>Phone</h6>
+                                                <p class="text-muted">123 456 789</p>
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <h6>Grade / Level</h6>
+                                                <p class="text-muted">Kinder</p>
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <h6>Section</h6>
+                                                <p class="text-muted">Joyful</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('layout/userdash_footer.ejs') %>
