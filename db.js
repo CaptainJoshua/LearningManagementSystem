@@ -17,21 +17,21 @@
 // }
 //! The code above has some issues.
 
-const { MongoClient } = require('mongodb');
-let dbConnection;
-let uri = 'mongodb+srv://joshua:joshua453@cluster0.dtrebuh.mongodb.net/?retryWrites=true&w=majority'
-exports.connectToDb = async(cb) => {
-    try {
-        const client = await MongoClient.connect(uri);
-        dbConnection = client.db();
-        return cb();
-    } catch (error) {
-        console.log(error);
-        return cb(error);
-    }
-};
+// const { MongoClient } = require('mongodb');
+// let dbConnection;
+// let uri = 'mongodb+srv://joshua:joshua453@cluster0.dtrebuh.mongodb.net/?retryWrites=true&w=majority'
+// exports.connectToDb = async(cb) => {
+//     try {
+//         const client = await MongoClient.connect(uri);
+//         dbConnection = client.db();
+//         return cb();
+//     } catch (error) {
+//         console.log(error);
+//         return cb(error);
+//     }
+// };
 
-exports.getDb = () => dbConnection;
+// exports.getDb = () => dbConnection;
 
 // Connect Node js Express to MongoDB using Mongoose ODM (Object Document Mapper)
 // let mongoose = require('mongoose');
