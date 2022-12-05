@@ -1,0 +1,32 @@
+/* style for body in login page */
+
+#login_page {
+    background-image: url("/public/assets/images/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.m-5 {
+    margin-top: 4rem !important;
+}
+
+.profile {
+    width: 500px;
+    margin: auto;
+    background-color: #39495a;
+    height: 400px;
+    box-shadow: 0px 1px 9px 4px #160c0c;
+}
+
+.sidesection {
+    height: 110px;
+    margin-top: 10px;
+    margin-right: 20px;
+    background: #3d3f4e;
+    box-shadow: 2px 5px 4px 0px #150707;
+}
+
+.background {
+    box-shadow: 0px 1px 5px 4px #0f0505;
+}
