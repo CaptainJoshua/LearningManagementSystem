@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/public/assets/index.css" />
-    <link rel="shortcut icon" href="/public/assets/logo.ico" type="image/x-icon" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/public/assets/login.css" />
+
+    <!-- School logo -->
+    <link rel="shortcut icon" href="/public/assets/images/logo.png" type="image/x-icon" />
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Mary Jv's School</title>
 </head>
@@ -14,7 +19,7 @@
 <body>
     <div class="container">
         <header onclick="reloadPage()">
-            <img src="/public/assets/logo.png" alt="logo" id="logo" class="logo" />
+            <img src="/public/assets/images/logo.png" alt="logo" id="logo" class="logo" />
             <h1>Mary JV's School</h1>
         </header>
         <!-- Login Form -->
@@ -32,16 +37,16 @@
                 <div class="inner"></div>
                 <button type="submit" value="submit">LOGIN</button>
             </div>
-            <label for="rememberMe">
+            <!-- <label for="rememberMe">
           <input type="checkbox" value="lsRememberMe" id="rememberMe" />
           Remember me</label
-        >
-        <div class="Forgot">
-          <a href="#">Forgot your password?</a>
-          <script type="text/javascript" src="/public/index.js"></script>
-        </div>
-      </form>
+        > -->
+            <div class="Forgot">
+                <a href="#">Forgot your password?</a>
+            </div>
+        </form>
     </div>
-    <%- include('layout/footer.ejs') %>
-  </body>
+    <script type="text/javascript" src="/public/login.js"></script>
+</body>
+
 </html>
